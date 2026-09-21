@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidney Lokker 5000 🐶🎯</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐶</text></svg>">
+</head>
+<body>
+  <div class="background-decorations" aria-hidden="true">
+    <div class="paw-bubble bubble-1">🐾</div>
+    <div class="paw-bubble bubble-2">🦴</div>
+    <div class="paw-bubble bubble-3">🐶</div>
+    <div class="paw-bubble bubble-4">🐾</div>
+    <div class="paw-bubble bubble-5">✨</div>
+  </div>
+
+  <main class="container">
+    <!-- Header Badge & Title -->
+    <header class="gadget-header">
+      <div class="gadget-badge">
+        <span class="pulse-dot"></span>
+        MODEL: SL-5000 &bull; SYSTEEM ONLINE
+      </div>
+      <h1 class="title">
+        SIDNEY LOKKER <span class="highlight">5000</span>
+      </h1>
+      <p class="subtitle">
+        De ultieme machine om Sidney gegarandeerd te lokken met onweerstaanbare honden!
+      </p>
+    </header>
+
+    <!-- Main Controller Card -->
+    <section class="device-card" aria-label="Sidney Lokker Bedieningspaneel">
+      <!-- Top status bar -->
+      <div class="device-bar">
+        <div class="status-indicator">
+          <span class="status-label">STATUS:</span>
+          <span id="systemStatus" class="status-value">STANDBY - KLAAR VOOR ACTIE</span>
+        </div>
+        <div class="audio-toggle-container">
+          <button id="soundToggle" class="sound-btn" aria-label="Geluidseffecten in- of uitschakelen" title="Geluid aan/uit">
+            <span id="soundIcon" aria-hidden="true">🔊</span>
+            <span id="soundText" class="sound-text">Geluid: Aan</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Action Button Area -->
+      <div class="action-section">
+        <button id="lureButton" class="lure-btn" type="button" aria-controls="dogDisplayArea">
+          <span class="btn-icon" aria-hidden="true">🐕</span>
+          <span class="btn-text">
+            <strong>ACTIVEER DE LOKKER!</strong>
+            <small>Klik voor een onweerstaanbare hond</small>
+          </span>
+          <span class="btn-shine" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Dog Display Screen -->
+      <div id="dogDisplayArea" class="display-screen" aria-live="polite">
+        <!-- Initial Placeholder -->
+        <div id="placeholderState" class="screen-content placeholder-state">
+          <div class="radar-scan">
+            <div class="radar-circle"></div>
+            <div class="radar-paw">🐾</div>
+          </div>
+          <h3>Lokker staat paraat</h3>
+          <p>Druk op de knop hierboven om een verse hond op het scherm te toveren en Sidney te lokken!</p>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="screen-content loading-state" hidden>
+          <div class="spinner-container">
+            <div class="spinner"></div>
+            <div class="loading-paw">🐶</div>
+          </div>
+          <h3>Hond opsporen...</h3>
+          <p id="loadingMessage">Hondenfrequenties afstemmen op Sidney's radar...</p>
+        </div>
+
+        <!-- Success Dog Image State -->
+        <div id="dogResultState" class="screen-content result-state" hidden>
+          <div class="image-wrapper">
+            <img id="dogImage" src="" alt="Een schattige hond om Sidney te lokken" loading="eager">
+            <span id="dogBreedBadge" class="breed-badge">Onbekend ras</span>
+          </div>
+
+          <div class="lure-alert-box">
+            <div class="alert-icon" aria-hidden="true">🎯</div>
+            <div class="alert-content">
+              <strong id="sidneyAlertTitle">Sidney Gedetecteerd!</strong>
+              <p id="sidneyAlertText">Sidney kijkt al op en kan deze hond niet weerstaan!</p>
+            </div>
+          </div>
+
+          <div class="screen-actions">
+            <button id="anotherDogBtn" class="secondary-btn" type="button">
+              <span>🔄</span> Nog een hond lokken!
+            </button>
+            <button id="saveDogBtn" class="secondary-btn" type="button">
+              <span>🔗</span> Deel foto link
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Dashboard / Meter Section -->
+      <footer class="device-footer">
+        <div class="stat-box">
+          <span class="stat-number" id="lureCount">0</span>
+          <span class="stat-label">Honden Gelanceerd</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-box">
+          <span class="stat-number" id="lurePower">0%</span>
+          <span class="stat-label">Lokkracht</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-box">
+          <span class="stat-number" id="successRate">100%</span>
+          <span class="stat-label">Sidney Succesgarantie</span>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Footer info -->
+    <footer class="page-footer">
+      <p>Sidney Lokker 5000 &bull; Gegarandeerd 100% effectief op elke Sidney die van honden houdt &bull; Gevoed door de Dog CEO API</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
